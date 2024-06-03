@@ -1,6 +1,5 @@
-import 'package:dms/modules/practice/riverpod.dart';
+import 'package:dms/modules/Dashboard/presentation/views/home_screen.dart';
 import 'package:dms/modules/todo_app/data/model/todo_hive_model.dart';
-import 'package:dms/modules/todo_app/presentation/view/todo_page.dart';
 import 'package:dms/services/locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -29,7 +28,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: ProviderScope(
         // create: (context) => DashboardBloc(),
-        child: TodoPage(),
+        child: HomeScreen(),
       ),
     );
   }
