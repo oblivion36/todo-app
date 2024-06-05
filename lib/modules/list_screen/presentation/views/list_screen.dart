@@ -1,3 +1,4 @@
+import 'package:dms/modules/list_screen/presentation/widgets/task_card.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_date_timeline/easy_date_timeline.dart';
 import 'package:gap/gap.dart';
@@ -10,7 +11,10 @@ class ListScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Scaffold(
+        backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
         appBar: AppBar(
+          backgroundColor: Colors.white,
+          surfaceTintColor: Colors.white,
           leading: Container(
             height: 50,
             width: 50,
@@ -56,7 +60,28 @@ class ListScreen extends StatelessWidget {
                   todayHighlightColor: Color(0xFFFBEFC9),
                 ),
               ),
-            )
+            ),
+            const SizedBox(height: 15),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 6,
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      TaskCard(
+                        title: '@isaias_cuula',
+                        description: 'Follow me on My Social Media',
+                        time: '12:08 PM',
+                        status: 'To-Do',
+                        cardColor: Colors.red.shade100,
+                      ),
+                      const SizedBox(
+                          height: 16.0), // Adjust the height as needed
+                    ],
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),
