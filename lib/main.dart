@@ -1,4 +1,9 @@
 import 'package:dms/modules/Dashboard/presentation/views/home_screen.dart';
+import 'package:dms/modules/add_note_screen/presentation/views/add_note.dart';
+import 'package:dms/modules/add_note_screen/presentation/views/details_view.dart';
+import 'package:dms/modules/list_screen/presentation/views/list_screen.dart';
+import 'package:dms/modules/task_todo_screen/presentation/views/task_todo_screen.dart';
+import 'package:dms/modules/add_note_screen/presentation/views/add_note.dart';
 import 'package:dms/modules/todo_app/data/model/todo_hive_model.dart';
 import 'package:dms/services/locator.dart';
 import 'package:flutter/material.dart';
@@ -24,9 +29,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProviderScope(
+      routes: {
+        '/addNote': (context) => const AddTaskPage(),
+        '/listScreen': (context) => const ListScreen(),
+        '/homeScreen': (context) => const HomeScreen(),
+        '/taskToDOScreen': (context) => const TaskTodoScreen(),
+        '/detailsView': (context) => DetailsView(),
+      },
+      home: const ProviderScope(
         // create: (context) => DashboardBloc(),
         child: HomeScreen(),
       ),

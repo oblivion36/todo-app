@@ -14,28 +14,38 @@ class AddTaskPage extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Colors.white,
               surfaceTintColor: Colors.white,
-              leading: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    color: const Color(0xFFFBEFC9)),
-                child: const Center(
-                  child: Icon(Icons.arrow_back),
+              leading: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/homeScreen');
+                },
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      color: const Color(0xFFFBEFC9)),
+                  child: const Center(
+                    child: Icon(Icons.arrow_back),
+                  ),
                 ),
               ),
               actions: [
-                Container(
-                  padding: const EdgeInsets.all(16),
-                  height: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: const Color(0xFFFBEFC9)),
-                  child: const Center(
-                    child: Row(
-                      children: [
-                        Text("Save Task"),
-                      ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/listScreen');
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(16),
+                    height: 50,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: const Color(0xFFFBEFC9)),
+                    child: const Center(
+                      child: Row(
+                        children: [
+                          Text("Save Task"),
+                        ],
+                      ),
                     ),
                   ),
                 ),
