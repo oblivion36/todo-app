@@ -34,38 +34,6 @@ class AddTaskPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< Updated upstream
-    return Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Scaffold(
-            backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
-            appBar: AppBar(
-              backgroundColor: Colors.white,
-              surfaceTintColor: Colors.white,
-              leading: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    color: const Color(0xFFFBEFC9)),
-                child: const Center(
-                  child: Icon(Icons.arrow_back),
-                ),
-              ),
-              actions: [
-                Container(
-                  padding: const EdgeInsets.all(16),
-                  height: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: const Color(0xFFFBEFC9)),
-                  child: const Center(
-                    child: Row(
-                      children: [
-                        Text("Save Task"),
-                      ],
-                    ),
-=======
     return Scaffold(
       key: addnote,
       drawer: MenuDrawer(),
@@ -95,39 +63,39 @@ class AddTaskPage extends StatelessWidget {
         actions: [
           GestureDetector(
             onTap: () async {
-              String id = randomAlphaNumeric(10);
-              Map<String, dynamic> taskInfoMap = {
-                "id": id,
-                "title": BlocProvider.of<AddNoteBloc>(context).titleController,
-                "date": BlocProvider.of<AddNoteBloc>(context).dateController,
-                "time": BlocProvider.of<AddNoteBloc>(context).timeController,
-                "description":
-                    BlocProvider.of<AddNoteBloc>(context).descriptionController,
-              };
-              await DatabaseMethod().addTask(taskInfoMap, id).then((onValue) {
-                Fluttertoast.showToast(
-                    msg: "Task Added Successfully",
-                    toastLength: Toast.LENGTH_SHORT,
-                    gravity: ToastGravity.CENTER,
-                    timeInSecForIosWeb: 1,
-                    backgroundColor: Colors.red,
-                    textColor: Colors.white,
-                    fontSize: 16.0);
-              });
+              // String id = randomAlphaNumeric(10);
+              // Map<String, dynamic> taskInfoMap = {
+              //   "id": id,
+              //   "title": BlocProvider.of<AddNoteBloc>(context).titleController,
+              //   "date": BlocProvider.of<AddNoteBloc>(context).dateController,
+              //   "time": BlocProvider.of<AddNoteBloc>(context).timeController,
+              //   "description":
+              //       BlocProvider.of<AddNoteBloc>(context).descriptionController,
+              // };
+              // await DatabaseMethod().addTask(taskInfoMap, id).then((onValue) {
+              //   Fluttertoast.showToast(
+              //       msg: "Task Added Successfully",
+              //       toastLength: Toast.LENGTH_SHORT,
+              //       gravity: ToastGravity.CENTER,
+              //       timeInSecForIosWeb: 1,
+              //       backgroundColor: Colors.red,
+              //       textColor: Colors.white,
+              //       fontSize: 16.0);
+              // });
 
-              // if (uid == null || uid?.isEmpty == true || uid == "") {
-              //   BlocProvider.of<AddNoteBloc>(context)
-              //       .add(AddNotePostInitialEvent());
-              // } else {
-              //   BlocProvider.of<AddNoteBloc>(context).add(
-              //       AddNoteEditInitialEvent(
-              //           uid: uid,
-              //           dateController: dateEditController,
-              //           descriptionController: descriptionEditController,
-              //           timeController: timeEditController,
-              //           titleController: titleEditController,
-              //           isCompleted: false));
-              // }
+              if (uid == null || uid?.isEmpty == true || uid == "") {
+                BlocProvider.of<AddNoteBloc>(context)
+                    .add(AddNotePostInitialEvent());
+              } else {
+                BlocProvider.of<AddNoteBloc>(context).add(
+                    AddNoteEditInitialEvent(
+                        uid: uid,
+                        dateController: dateEditController,
+                        descriptionController: descriptionEditController,
+                        timeController: timeEditController,
+                        titleController: titleEditController,
+                        isCompleted: false));
+              }
               Navigator.pushNamed(context, '/listScreen');
             },
             child: Padding(
@@ -183,7 +151,6 @@ class AddTaskPage extends StatelessWidget {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                     borderSide: BorderSide(color: Colors.yellow.shade200),
->>>>>>> Stashed changes
                   ),
                 ),
               ),

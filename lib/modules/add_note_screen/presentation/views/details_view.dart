@@ -144,7 +144,7 @@ class DetailsView extends StatelessWidget {
                         Row(
                           children: [
                             SvgPicture.asset(
-                              'assets/images/details_view/clock_loader_90_24dp_FILL0_wght400_GRAD0_opsz24.svg',
+                              'assets/icons/clock_loader_90_24dp_FILL0_wght400_GRAD0_opsz24.svg',
                               height: 24,
                               width: 24,
                               color: const Color.fromARGB(255, 233, 30, 99),

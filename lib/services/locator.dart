@@ -53,5 +53,5 @@ void initializeDependencies() async {
   serviceLocator.registerSingleton<AddNoteEditRepo>(AddNoteEditRepoImpl());
   serviceLocator
       .registerLazySingleton<AddNoteEditUsecase>(() => AddNoteEditUsecase());
-  serviceLocator.registerLazySingleton<DatabaseMethod>(() => DatabaseMethod());
+  // serviceLocator.registerLazySingleton<DatabaseMethod>(() => DatabaseMethod());
 }

@@ -28,16 +28,6 @@ class ListScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.white,
           surfaceTintColor: Colors.white,
-<<<<<<< Updated upstream
-          leading: Container(
-            height: 50,
-            width: 50,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(100),
-                color: const Color(0xFFFBEFC9)),
-            child: const Center(
-              child: Icon(Icons.arrow_back),
-=======
           leading: Padding(
             padding: const EdgeInsets.only(left: 16, top: 5),
             child: Container(
@@ -54,25 +44,10 @@ class ListScreen extends StatelessWidget {
                   },
                 ),
               ),
->>>>>>> Stashed changes
             ),
           ),
           leadingWidth: 65,
           actions: [
-<<<<<<< Updated upstream
-            Container(
-              padding: const EdgeInsets.all(16),
-              height: 50,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: const Color(0xFFFBEFC9)),
-              child: const Center(
-                child: Row(
-                  children: [
-                    Icon(Icons.add),
-                    Text("Add Task"),
-                  ],
-=======
             GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/addNote');
@@ -93,45 +68,11 @@ class ListScreen extends StatelessWidget {
                       ],
                     ),
                   ),
->>>>>>> Stashed changes
                 ),
               ),
             ),
           ],
         ),
-<<<<<<< Updated upstream
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Gap(30),
-            Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: const Color(0xFFFBEFC9)),
-              child: EasyDateTimeLine(
-                initialDate: DateTime.now(),
-                onDateChange: (selectedDate) {},
-                activeColor: const Color(0xFFFDD868),
-                dayProps: const EasyDayProps(
-                  todayHighlightStyle: TodayHighlightStyle.none,
-                  todayHighlightColor: Color(0xFFFBEFC9),
-                ),
-              ),
-            ),
-            const SizedBox(height: 15),
-            Expanded(
-              child: ListView.builder(
-                itemCount: 6,
-                itemBuilder: (context, index) {
-                  return Column(
-                    children: [
-                      TaskCard(
-                        title: '@isaias_cuula',
-                        description: 'Follow me on My Social Media',
-                        time: '12:08 PM',
-                        status: 'To-Do',
-                        cardColor: Colors.red.shade100,
-=======
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: BlocBuilder<ListScreenBloc, ListScreenState>(
@@ -156,7 +97,6 @@ class ListScreen extends StatelessWidget {
                       dayProps: const EasyDayProps(
                         todayHighlightStyle: TodayHighlightStyle.none,
                         todayHighlightColor: Color(0xFFFBEFC9),
->>>>>>> Stashed changes
                       ),
                     ),
                   ),

@@ -2,8 +2,6 @@ import 'package:dms/modules/Dashboard/presentation/bloc/home_screen_bloc.dart';
 import 'package:dms/modules/Dashboard/presentation/bloc/home_screen_event.dart';
 import 'package:dms/modules/Dashboard/presentation/bloc/home_screen_state.dart';
 import 'package:dms/modules/Dashboard/presentation/widgets/custom_card_widget.dart';
-<<<<<<< Updated upstream
-=======
 import 'package:dms/modules/Dashboard/presentation/widgets/profile_details.dart';
 import 'package:dms/modules/add_note_screen/presentation/views/details_view.dart';
 import 'package:dms/modules/list_screen/domain/entities/list_screen_etitites_model.dart';
@@ -16,7 +14,6 @@ import 'package:dms/utils/common_widget/failed_widget.dart';
 import 'package:dms/utils/common_widget/loading_widget.dart';
 import 'package:dms/utils/common_widget/menu_drawer.dart';
 import 'package:flutter/gestures.dart';
->>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,16 +29,12 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< Updated upstream
-        appBar: AppBar(
-=======
         key: _scaffoldKey,
         drawer: MenuDrawer(),
         backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
         appBar: AppBar(
           backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
           surfaceTintColor: Colors.transparent,
->>>>>>> Stashed changes
           title: Center(
             child: Text(
               'Todo App',
@@ -145,131 +138,6 @@ class HomeScreen extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                         color: Colors.grey,
                       ),
-<<<<<<< Updated upstream
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-                child: TextFormField(
-                  onChanged: (value) {
-                    // BlocProvider.of<ToDoBloc>(context)
-                    //     .add(SearchTasksEvent());
-                  },
-                  // controller: BlocProvider.of<ToDoBloc>(context)
-                  //     .searchTextController,
-                  decoration: InputDecoration(
-                    hintText: 'Search a task...',
-                    prefixIcon: const Icon(Icons.search),
-                    border: InputBorder.none,
-                    contentPadding:
-                        EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Row(
-                children: [
-                  CustomCard(
-                    color: Colors.red,
-                    icon: Icons.assignment,
-                    name: "To-Do",
-                    bordercolor: Colors.red,
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  CustomCard(
-                    color: Colors.yellow,
-                    icon: Icons.assignment_late,
-                    name: "Progress",
-                    bordercolor: Colors.yellow,
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  CustomCard(
-                    color: Colors.green,
-                    icon: Icons.assignment_turned_in,
-                    name: "Done",
-                    bordercolor: Colors.green,
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Text(
-                  "Today's Tasks",
-                  style: GoogleFonts.merriweather(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                ),
-                Text(
-                  "See All",
-                  style: GoogleFonts.nunito(
-                    fontSize: 16,
-                    color: Colors.grey,
-                  ),
-                ),
-              ]),
-              const SizedBox(
-                height: 10,
-              ),
-              Expanded(
-                child: Container(
-                  width: double.infinity,
-                  // height: double.infinity,
-                  padding: EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 255, 233, 168),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Column(
-                    children: [
-                      Expanded(
-                        child: Text(
-                          "You don't have task\n for today!",
-                          textAlign: TextAlign.center,
-                          // maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          style: GoogleFonts.nunito(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      Expanded(
-                        child: Text(
-                          "Click Here to Create One",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.nunito(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-=======
                     ),
                     const SizedBox(
                       height: 15,
@@ -673,7 +541,6 @@ class HomeScreen extends StatelessWidget {
                 ),
               );
             },
->>>>>>> Stashed changes
           ),
         ));
   }
