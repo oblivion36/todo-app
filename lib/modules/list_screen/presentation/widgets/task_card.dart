@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class TaskCard extends StatelessWidget {
-  final String title;
-  final String description;
-  final String time;
-  final String status;
+  final String? title;
+  final String? description;
+  final String? time;
+  final String? status;
   final Color cardColor;
 
   TaskCard({
@@ -37,7 +37,7 @@ class TaskCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      title,
+                      title ?? "",
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
@@ -45,7 +45,7 @@ class TaskCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      description,
+                      description ?? "",
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
@@ -55,7 +55,7 @@ class TaskCard extends StatelessWidget {
                     // const SizedBox(height: 16),
                     Spacer(),
                     Text(
-                      time,
+                      time ?? "",
                       style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -80,7 +80,7 @@ class TaskCard extends StatelessWidget {
               quarterTurns: 3,
               child: Center(
                 child: Text(
-                  status,
+                  status ?? "",
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
