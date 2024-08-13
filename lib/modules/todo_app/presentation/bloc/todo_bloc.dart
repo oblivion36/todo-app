@@ -221,7 +221,7 @@ class ToDoBloc extends Bloc<ToDoEvent, ToDoState> {
           description: descriptionController.text,
           title: titleController.text,
         ));
-    print(response);
+
     if (response.isLeft) {
       emit(TODOEditFailState());
     } else {

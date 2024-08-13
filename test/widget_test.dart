@@ -1,3 +1,4 @@
+import 'package:dms/modules/Dashboard/presentation/views/home_screen.dart';
 import 'package:dms/modules/todo_app/presentation/view/todo_page.dart';
 import 'package:dms/services/locator.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,7 @@ void main() {
   testWidgets('Login page validation test', (WidgetTester tester) async {
     app.main();
     initializeDependencies();
-    await tester.pumpWidget(MaterialApp(home: CenteredButtonPage()));
+    await tester.pumpWidget(MaterialApp(home: HomeScreen()));
 
     await tester.pumpAndSettle();
 

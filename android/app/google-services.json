@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "568787769711",
+    "project_id": "to-do-app-906ea",
+    "storage_bucket": "to-do-app-906ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568787769711:android:a6c109323f2943b53af09a",
+        "android_client_info": {
+          "package_name": "com.example.dms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArydHo5xnkEA-aw_WuDPJEEObwGmdcs04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
